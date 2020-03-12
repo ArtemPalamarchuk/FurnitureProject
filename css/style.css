@@ -8,18 +8,19 @@
     src: url(../fonts/segoe.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*------------------------------------------General Structure------------------------------------------*/
-.main-page{
+.main-page {
     height: 100vh;
     width: 100vw;
 }
 
-.container{
+.container {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -27,7 +28,7 @@
     flex-direction: column;
 }
 
-.header{
+.header {
     min-height: 220px;
     width: 100%;
     margin: 0 auto;
@@ -35,78 +36,79 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
-.sliderWrap{
+.sliderWrap {
     display: none;
     flex-grow: 1;
 }
 
-.logo{
+.logo {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.header__right-side{
+.header__right-side {
     height: 100%;
     padding: 20px 0;
 }
 
 /*------------------------------------------- Logo ---------------------------------------------------*/
 
-.logo-img{
+.logo-img {
     margin-left: 65px;
     transform: scale(0.8, 1);
     width: 205px;
     height: 115px;
 }
 
-.logo-title{
+.logo-title {
     font-size: 22px;
 }
 
 /*------------------------------------------- Right Side ---------------------------------------------*/
 
 /*------------------------ Language --------------------------*/
-.phone-language{
+.phone-language {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
 }
 
-.phone{
+.phone {
     font-size: 26px;
     font-weight: bold;
     margin-right: 35px;
 }
 
-.language-block{
+.language-block {
     display: flex;
 }
 
-.language-img{
+.language-img {
     width: 45px;
     height: 40px;
 }
 
-.current-language{
+.current-language {
     margin: 2px 0 0 5px;
     font-size: 22px;
     cursor: pointer;
 }
 
 /*------------------------ Social --------------------------*/
-.social-networks{
+.social-networks {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-right: 70px;
 }
 
-.social-networks img{
+.social-networks img {
     margin: 20px 10px;
     width: 35px;
     height: 35px;
@@ -114,15 +116,99 @@
 }
 
 /*------------------------ Nav Menu --------------------------*/
-.nav-menu a{
+.nav-menu a {
     text-decoration: none;
     color: black;
     font-size: 20px;
     margin: 0 22px;
 }
 
-.nav-menu a:last-child{
+.nav-menu a:last-child {
     margin-right: 75px;
 }
 
+@media (min-width: 1px) and (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+}
 
+@media (min-width: 1px) and (max-width: 991px) {
+    .logo, .header__right-side {
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .phone-language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .social-networks {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-menu {
+        display: flex;
+
+    }
+
+}
+
+@media (min-width: 1px) and (max-width: 600px){
+    .nav-menu a{
+        margin: 0 15px;
+    }
+    .nav-menu a:last-child{
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 480px) {
+    .header__right-side {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .language-block {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+    }
+
+    .current-language {
+        font-size: 16px;
+    }
+
+    .language-img {
+        height: 25px;
+        width: 30px;
+    }
+
+    .social-networks img {
+        margin: 0 10px;
+    }
+
+    .social-networks {
+        padding: 20px 0;
+    }
+    
+    .logo-title{
+        text-align: center;
+    }
+
+    .logo{
+        align-items: center;
+    }
+
+    .logo-img{
+        margin: 0 auto;
+    }
+
+}

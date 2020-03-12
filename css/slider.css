@@ -38,6 +38,11 @@
     margin: 0 auto
 }
 
+.slider__item:focus {
+    outline: none;
+    border: none;
+}
+
 .slick-arrow:after {
     content: "";
     width: 20px;
