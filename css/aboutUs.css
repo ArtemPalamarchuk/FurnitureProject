@@ -1,0 +1,35 @@
+.about-us-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    background: url(../img/aboutUs/bg1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.about-us-info__left {
+    width: 440px;
+    background-image: url(../img/aboutUs/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-us-info__right {
+    max-width: 800px;
+    text-indent: 3em;
+    padding: 20px;
+    font-family: segoe, serif;
+    font-size: 18px;
+}
+
+
+@media (min-width: 1px) and (max-width: 1200px) {
+    .about-us-info__left{
+        margin: 0 auto;
+    }
+    .about-us-info__right{
+        margin: 0 auto;
+    }
+}
